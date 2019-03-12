@@ -2697,7 +2697,7 @@ def perform(update):
 
         starttime = time.time()
 
-        loop = (update - 1 + op.delay) / op.delay
+        loop = (update - 1 + op.delay) // op.delay
         step = ((update - 1) % op.delay) + 1
 
         ### Get current time (may be different from schedule) for debugging
